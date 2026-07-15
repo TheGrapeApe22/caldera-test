@@ -1,0 +1,15 @@
+- name: cheese ability
+  description: cheese description
+  tactic: collection
+  technique_id: ' T1564.001'
+  technique_name: Abuse Elevation Control Mechanism
+  executors:
+  - cleanup:
+    - echo "cleanup"
+    timeout: 30
+    platform: windows
+    name: psh
+    payloads: []
+    parsers: []
+    command: echo "cheese :)"
+  id: 8b160fd0-6323-412b-83b9-3a33e0f8fd1c
