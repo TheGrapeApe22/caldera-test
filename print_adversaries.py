@@ -6,9 +6,6 @@ load_dotenv()
 BASE_URL = os.getenv("CALDERA_URL")
 RED_KEY = os.getenv("CALDERA_RED_KEY")
 
-# Construct the v2 API URL
-AGENTS_ENDPOINT = f"{BASE_URL}/api/v2/abilities"
-
 # Define headers using the Red Team API Key
 headers = {
     "KEY": RED_KEY,
@@ -16,8 +13,7 @@ headers = {
 }
 
 try:
-    response = requests.get(AGENTS_ENDPOINT, headers=headers)
-    
+    response = requests.get(f"{BASE_URL}/api/v2/agents", headers=headers)
     if response.status_code == 200:
         print(response.json()[:3])
     else:

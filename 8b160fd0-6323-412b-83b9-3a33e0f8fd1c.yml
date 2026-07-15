@@ -1,3 +1,4 @@
+# this is a copy of the ability. the functional one is located in caldera/plugins/stockpile/data/abilities/collection
 - name: cheese ability
   description: cheese description
   tactic: collection
